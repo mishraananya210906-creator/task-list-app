@@ -6,7 +6,7 @@ A full-stack task list app. Users can **add, edit, delete** tasks and **mark the
 - **Database:** SQLite (via Node's built-in `node:sqlite` module), data saved in a local file
 - **Frontend:** HTML, CSS and vanilla JavaScript: responsive, dark UI with toast feedback
 
-**Live demo:** _add your deployed link here (optional)_
+**Live demo:** ==> https://task-list-app-96w3.onrender.com
 
 ## Screenshots
 
