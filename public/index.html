@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task List</title>
+  <meta name="description" content="A simple full-stack task list: add, edit, delete and complete tasks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-head">
+      <div class="app-head-text">
+        <h1>Task <span>List</span></h1>
+        <p id="summary" class="summary" aria-live="polite">Loading…</p>
+      </div>
+      <img class="hero-img" src="img/bunny.jpg" alt="A cute bunny studying at a desk" width="150" height="150" />
+    </header>
+
+    <form id="addForm" class="add" autocomplete="off">
+      <div class="add-fields">
+        <input id="newTitle" type="text" maxlength="120" placeholder="What needs to be done?" aria-label="Task title" required />
+        <input id="newDesc" type="text" maxlength="500" placeholder="Add a note (optional)" aria-label="Task note" />
+      </div>
+      <button type="submit" class="btn btn-primary">Add task</button>
+    </form>
+
+    <div class="toolbar">
+      <div class="filters" role="tablist" aria-label="Filter tasks">
+        <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter" data-filter="active" role="tab" aria-selected="false">Active</button>
+        <button class="filter" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+      </div>
+    </div>
+
+    <ul id="taskList" class="tasks" aria-live="polite"></ul>
+    <div id="empty" class="empty" hidden>
+      <img id="emptyImg" src="img/calendar.jpg" alt="" />
+      <p id="emptyText"></p>
+    </div>
+  </main>
+
+  <div id="toasts" class="toasts" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
